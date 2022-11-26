@@ -1,12 +1,12 @@
-const BaseballGame = require("./BaseballGame");
+const GameController = require("./Controller/GameController");
 
 class App {
   constructor() {
-    this.baseballGame = new BaseballGame();
+    this.GameController = new GameController();
   }
 
   play() {
-    this.baseballGame.firstPlay();
+    this.GameController.startGame();
   }
 }
 
