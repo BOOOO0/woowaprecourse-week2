@@ -1,8 +1,6 @@
 class BaseballGame {
   #randomNumberArray;
   constructor(randomNumberArray) {
-    this.ball = 0;
-    this.strike = 0;
     this.#randomNumberArray = randomNumberArray;
   }
 
@@ -36,28 +34,31 @@ class BaseballGame {
   }
 
   checkBall(computerRandomNumberArray, userAnswer) {
+    let ball = 0;
+
     userAnswer.split("").forEach((digit, index) => {
       if (
         computerRandomNumberArray.includes(parseInt(digit)) &&
         computerRandomNumberArray.indexOf(parseInt(digit)) !== index
       )
-        this.ball++;
+        ball++;
     });
+
+    return ball;
   }
 
   checkStrike(computerRandomNumberArray, userAnswer) {
+    let strike = 0;
+
     userAnswer.split("").forEach((digit, index) => {
       if (
         computerRandomNumberArray.includes(parseInt(digit)) &&
         computerRandomNumberArray.indexOf(parseInt(digit)) === index
       )
-        this.strike++;
+        strike++;
     });
-  }
 
-  initializeBallandStrike() {
-    this.ball = 0;
-    this.strike = 0;
+    return strike;
   }
 
   gameContinueorEnd(strike) {
