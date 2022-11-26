@@ -4,6 +4,8 @@ const Constant = {
   CLOSE: 2,
   STRIKE_OUT: 3,
   INVALID: 0,
+  BALL: "ball",
+  STRIKE: "strike",
 };
 
 module.exports = Constant;
