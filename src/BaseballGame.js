@@ -1,15 +1,14 @@
-const { REPLAY, CLOSE, STRIKE_OUT, INVALID } = require("./Constant");
+const { REPLAY, CLOSE, STRIKE_OUT, INVALID } = require("./utils/Constant");
 const MissionUtils = require("@woowacourse/mission-utils");
-const Computer = require("./Computer");
+const randomArrayGenerator = require("./randomArrayGenerator");
 const User = require("./User");
-const ExceptionHandler = require("./ExceptionHandler");
+const ExceptionHandler = require("./utils/ExceptionHandler");
 
 class BaseballGame {
   constructor() {
     this.ball = 0;
     this.strike = 0;
 
-    this.computer = new Computer();
     this.user = new User();
     this.exceptionHandler = new ExceptionHandler();
   }

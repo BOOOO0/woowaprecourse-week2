@@ -1,4 +1,4 @@
-const { USER_INPUT_LENGTH } = require("./Constant");
+const { USER_INPUT_LENGTH } = require("./utils/Constant");
 const { Random } = require("@woowacourse/mission-utils");
 
 const randomArrayGenerator = {

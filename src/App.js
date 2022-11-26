@@ -1,4 +1,3 @@
-const MissionUtils = require("@woowacourse/mission-utils");
 const BaseballGame = require("./BaseballGame");
 
 class App {
